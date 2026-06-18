@@ -6,7 +6,7 @@ export default function Navbar() {
           <div>
             <h1 className="navbar-title">THRIFT SECOND</h1>
             <p className="navbar-subtitle">
-              Managed by 4n_Archive
+              Streetwear second hand.
             </p>
           </div>
         </div>

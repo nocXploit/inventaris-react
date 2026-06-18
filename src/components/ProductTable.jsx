@@ -7,7 +7,7 @@ export default function ProductTable({ data, loading, onCekBarang }) {
         <div className="header-content">
           <h3 className="table-title">Daftar Produk Tersedia</h3>
           <p className="table-subtitle">
-            Update dan pantau stok barang
+            Update dan pantau stok disini.  
           </p>
         </div>
       </div>
@@ -34,10 +34,13 @@ export default function ProductTable({ data, loading, onCekBarang }) {
                 <td>
                   <span className="category-badge">{item.kategori}</span>
                 </td>
-                <td
-                  className={`stock-cell ${item.stok === 0 ? "out-of-stock" : ""}`}
-                >
-                  {item.stok === 0 ? "Habis" : `${item.stok} Pcs`}
+                <td>
+                  <span
+                    className="stock-cell"
+                    style={item.stok === 0 ? { color: "#ef4444" } : {}}
+                  >
+                    {item.stok === 0 ? "Habis" : item.stok}
+                  </span>
                 </td>
                 <td className="price-cell">Rp {item.harga}</td>
                 <td className="action-cell">
