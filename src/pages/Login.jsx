@@ -1,5 +1,5 @@
-import {useNavigate} from 'react-router-dom';
-import {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import './Login.css';
 
 export default function Login() {
@@ -7,17 +7,30 @@ export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    /* TAHAP 9 STATE */
+    const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const isFormValid = username.length >= 4 && password.length >= 6;
+
     const handleLogin = (e) => {
         e.preventDefault();
-        // Simple login logic - accepting any non-empty input for demo
-        if (username && password) {
-            localStorage.setItem('isAuthenticated', 'true');
-            navigate('/dashboard');
-        } else {
-            alert('Please enter username and password');
-        }
-    };
+        setIsLoading(true);
+        setError('');
 
+        // Jeda 1,5 detik
+        setTimeout(() => { 
+            if (username === "nova" && password === "gudang123") {
+                localStorage.setItem('isAuthenticated', 'true');
+                setIsLoading(false);
+                navigate('/dashboard');
+            } else {
+                setError('Username atau password salah.');
+                setIsLoading(false);
+            }
+        }, 
+        1500);
+    };
+        
     return (
         <div className="login-container">
             <div className="login-box">
@@ -33,6 +46,9 @@ export default function Login() {
                 <h2>Masuk ke Sistem</h2>
                 <p className="subtitle">Kelola inventaris Anda dengan mudah</p>
 
+                {/* Error Message */}
+                {error && <p style={{ color: '#f87171', fontSize: '14px', marginBottom: '15px', textAlign: 'center' }}>{error}</p>}
+                
                 <form onSubmit={handleLogin}>
                     <div className="input-group">
                         <span className="input-icon">
@@ -58,10 +74,14 @@ export default function Login() {
                             required
                         />
                     </div>
-                    <button type="submit" className="login-btn">Login</button>
+                    <button 
+                        type="submit" 
+                        className="login-btn" 
+                        disabled={!isFormValid || isLoading}
+                        style={{ opacity: !isFormValid ? 0.5 : 1, cursor: !isFormValid ? 'not-allowed' : 'pointer' }}>
+                        {isLoading ? 'Memeriksa...' : 'Masuk'}
+                    </button>
                 </form>
-
-
             </div>
         </div>
     );
