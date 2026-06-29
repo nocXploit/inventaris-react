@@ -46,8 +46,7 @@ export default function ProductTable({ data, loading, onCekBarang }) {
                 <td className="action-cell">
                   <button
                     onClick={() => onCekBarang(item.nama)}
-                    className="btn-action"
-                  >
+                    className="btn-action">
                     Cek Detail
                   </button>
                 </td>

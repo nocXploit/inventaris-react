@@ -24,9 +24,10 @@ export default function DetailBarang() {
                 <p><strong>Deskripsi:</strong> {detailProduk.deskripsi}</p>
             </div>
          
-            <Link to="/dashboard/produk" style={{ display: 'inline-block', padding: '10px 20px', backgroundColor: '#007BFF', color: '#fff', textDecoration: 'none', borderRadius: '5px', fontWeight: '600' }}>
+            <Link to="/dashboard/produk" style={{ display: 'inline-block', padding: '10px 20px', backgroundColor: '#3b82f6', color: '#fff', textDecoration: 'none', borderRadius: '5px', fontWeight: '600' }}>
                 ⬅️ Kembali ke Data Produk
             </Link>
         </div>
     );
 }
+

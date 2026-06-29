@@ -71,13 +71,13 @@ p {
 
 /* ===== LINKS ===== */
 a {
-  color: #0066cc;
+  color: #3b82f6;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #004499;
+  color: #2563eb;
   text-decoration: underline;
 }
 
@@ -130,8 +130,8 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: #0066cc;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 /* ===== SCROLLBAR ===== */

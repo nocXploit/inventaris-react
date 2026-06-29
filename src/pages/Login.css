@@ -96,7 +96,7 @@
 }
 
 .input-group input:focus {
-    border-color: #1a73e8;
+    border-color: #3b82f6;
 }
 
 .input-group input::placeholder {
@@ -106,7 +106,7 @@
 .login-btn {
     width: 100%;
     padding: 14px;
-    background-color: #1a73e8;
+    background-color: #3b82f6;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -118,7 +118,7 @@
 }
 
 .login-btn:hover {
-    background-color: #1557b0;
+    background-color: #2563eb;
 }
 
 .divider {

@@ -1,11 +1,11 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import App from "./App.jsx";
-import DashboardLayout from "./components/DashboardLayout.jsx";
-import DetailBarang from "./pages/DetailBarang.jsx";
-import Login from "./pages/Login.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import DashboardLayout from "../shared/components/DashboardLayout.jsx";
+import DetailBarang from "../pages/DetailBarang.jsx";
+import Login from "../pages/Login.jsx";
+import ProtectedRoute from "../shared/components/ProtectedRoute.jsx";
 
-import Dashboard from "./pages/Dashboard.jsx";
+import Dashboard from "../pages/Dashboard.jsx";
 
 export const router = createBrowserRouter([
   {
