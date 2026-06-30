@@ -93,7 +93,7 @@ export default function Dashboard() {
     }
   };
 
-  /* 2. AKSI EDIT BARANG (PUT) */
+  /* EDIT BARANG (PUT) */
   const handleEdit = (id, itemSkarang) => {
     setEditingId(id);
     setFormData({
@@ -154,7 +154,6 @@ export default function Dashboard() {
     }
   };
 
-  // Mapping bawaan lu tetep utuh, tapi ditambahkan field id asli di return objeknya buat referensi CRUD
   const products = apiDataBarang.map((b) => ({
     id: b.id,
     namaAsli: b.nama,
